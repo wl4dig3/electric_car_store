@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    gap: 10px;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "menu"
+    "footer"
+}
+
+
+@media (max-width: 576px) {
+    main {
+        background-color: cornflowerblue;
+        grid-template-areas: "header"
+                            "menu"
+                            "footer"
+    }
+    .menu-items {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        display: flex;
+        margin: 0.3rem 0.5rem;
+        align-items: baseline;
+        
+        & i {
+            margin-right: 0.3rem;
+            font-size: 1.5rem;
+        }
+
+        & p {
+            font-size: 0.9rem;
+            line-height: 1rem;
+        }
+    }
+    .text-center {
+        text-align: center;
+    }
+}
