@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,15 @@
     <title>Electric Car Store</title>
 </head>
 
-<body>
-    <main class="grid-container">
+<body class="grid-container">
+    <main>
         <header>
             <div class="nav">
                 <div class="logo">
                     <i class="bi bi-car-front-fill"></i>
                     <p>Electric Cars</p>
                 </div>
-                <i class="bi bi-menu-app me-3"></i>
+                <i class="bi bi-menu-app me-3 fs-3"></i>
             </div>
         </header>
         <menu class="menu-container">
@@ -38,32 +38,56 @@
             <div class="main-container">
                 <div class="filter-container text-center">
                     <h4>Ordenar por:</h4>
-                    <div class="input-search text-center">
-                        <select class="select" name="" id="">
-                            <option value="Options">Precio</option>
-                        </select>
+                    <div class="input-search text-center" width="100px">
+                        <select class="form-select form-select-lg mb-3 rounded" aria-label=".form-select-lg example">
+                            <option selected>Precio</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
                     </div>
                 </div>
                 <!-- card 1 -->
-                <div class="card" style="width: 100%">
-                    <img src="./Assets/Img/destornillador-inalamb.jpg" class="card-img-top" alt="...">
+                <div class="card  mb-3" style="width: 100%">
+                    <img src="./Assets/img/bugatti.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text mb-0 text-center">Ferreteria</p>
-                        <p class="text-center grey">$51.100</p>
-                        <button class="btn btn-primary" type="button">Ver más</button>
+                        <p class="card-text mb-2 text-center">Modelo: <span>Bugatti</span></p>
+                        <div class="flex-center text-center">
+                            <button class="btn btn-primary"  type="button">Ver más</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <!-- pagination component  -->
+            <div class="flex-container flex-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
         </main>
         <footer>
             <div class="footer-container">
-                <div class="redes-sociales">
+                <div class="redes-sociales text-center">
                     <!-- facebook -->
-                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-facebook me-2 fs-4"></i>
                     <!-- instagram -->
-                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-instagram fs-4"></i>
                 </div>
-                <p>Todos los derechos reservados</p>
+                <p class="text-center">Todos los derechos reservados</p>
             </div>
         </footer>
     </main>
