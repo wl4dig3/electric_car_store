@@ -14,16 +14,7 @@ body, .main-container {
         "footer"
 }
 
-header, footer {
-    background-color: blue;
-    color: aliceblue;
-}
-
-.nav {
-    height: 5rem;
-}
-
-
+/* estilos mobile  */
 @media (max-width: 576px) {
     body {
         width: 100%;
@@ -33,12 +24,18 @@ header, footer {
             "main"
             "footer"
     }
-
+    .hide {
+        display: none;
+    }
     .menu-items {
         display: none;
     }
-
+    header, footer {
+        background-color: blue;
+        color: aliceblue;
+    }
     .nav {
+        height: 5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -59,7 +56,9 @@ header, footer {
             line-height: 1rem;
         }
     }
-
+    .pagin {
+        justify-content: center;
+    }
     .text-center {
         text-align: center;
         margin: 0;
@@ -77,11 +76,64 @@ header, footer {
     .input-search {
         width: 300px;
         margin: auto;
-        background-color: yellow;
     }
 
     .footer-container {
         padding: 0.5rem 0;
     }
+
+}
+/* estilos desktop */
+
+@media (min-width: 576px) {
+    .grid-container {
+        width: 100%;
+        grid-template-areas:    "header main"
+                                "footer main"
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 1rem;
+        gap: 0.4rem;
+    }
+    header {
+        height:max-content;
+        color: black;
+        background-color: #fff;
+    }
+    .footer-container {
+        color: black;
+        background-color: #fff;
+    }
+    .input-search {
+        width: 90%;
+        margin: auto;
+    }
+
+    .main-container {
+        width: 100%;
+        background-color: rgb(196, 214, 238);
+
+    }
+    .menu-items {
+        text-align: center;
+    }
+    .pagin {
+        justify-content: center;
+    }
+    .nav .logo {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin: auto;
+        padding-top: 0.5rem;
+        & i {
+            margin-right: 0.3rem;
+        }
+}
+.hidee {
+    display: none;
+}
 
 }
