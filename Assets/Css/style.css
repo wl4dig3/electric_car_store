@@ -1,21 +1,40 @@
 body, .main-container {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .grid-container {
     width: 100%;
     height: 100vh;
-    gap: 10px;
     display: grid;
     grid-template-areas:
         "header"
         "menu"
         "footer"
 }
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    color: chartreuse;
+}
 
 /* estilos mobile  */
 @media (max-width: 576px) {
+    .card {
+        padding: 1rem;
+        border-radius: 25px;
+    }
+    .card > img {
+        width: 100%;
+        border-radius: 25px;
+        transition: width 2s;
+    }
+    .card >img:hover {
+        width: 110%;
+    }
     body {
         width: 100%;
         height: 100vh;
@@ -62,6 +81,7 @@ body, .main-container {
     .text-center {
         text-align: center;
         margin: 0;
+        padding: 0;
     }
 
     .flex-container {
@@ -85,11 +105,18 @@ body, .main-container {
 }
 /* estilos desktop */
 
-@media (min-width: 576px) {
+@media  (min-width: 768px) and (max-width: 3096px) {
     .grid-container {
         width: 100%;
         grid-template-areas:    "header main"
                                 "footer main"
+    }
+    .filter-container> h4 {
+        padding-top: 0.5rem;
+    }
+    .filter-container {
+        background-color: rgb(155, 152, 152);
+        padding-bottom: 0.5rem;
     }
     .card-container {
         display: grid;
@@ -97,14 +124,32 @@ body, .main-container {
         padding: 0 1rem;
         gap: 0.4rem;
     }
+    .card>img:hover {
+        opacity: 0.6 ;
+    }
+    .card {
+        animation: move 2s infinite;
+        animation-direction: alternate;
+    }
+    @keyframes move {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(50px);
+        }
+        
+    }
     header {
-        height:max-content;
-        color: black;
-        background-color: #fff;
+        color: #fff;
+        background-color: blue;
     }
     .footer-container {
-        color: black;
-        background-color: #fff;
+        color:#fff;
+        background-color: blue;
+    }
+    .footer-container .text-center {
+        margin: 0 0.3rem;
     }
     .input-search {
         width: 90%;
@@ -136,4 +181,82 @@ body, .main-container {
     display: none;
 }
 
+}
+
+/* estilos pad */
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .grid-container {
+        background-color: rgb(218, 240, 240);
+        transition: background-color 2s;
+        width: 100%;
+        grid-template-areas:    "header main"
+                                "footer main"
+    }
+    .grid-container:hover {
+        background-color: rgb(45, 146, 138);
+    }
+    .filter-container> h4 {
+        padding-top: 0.5rem;
+    }
+    .filter-container {
+        background-color: rgb(231, 225, 225);
+    }
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
+        gap: 0.4rem;
+    }
+    header, footer {
+        background-color: blue;
+        color: aliceblue;
+    }
+    .nav {
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        margin: 0.3rem 0.5rem;
+        align-items: baseline;
+
+        & i {
+            margin-right: 0.3rem;
+            font-size: 1.5rem;
+        }
+
+        & p {
+            font-size: 0.9rem;
+            line-height: 1rem;
+        }
+    }
+    .pagin {
+        justify-content: center;
+    }
+    .text-center {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .flex-container {
+        display: flex;
+    }
+
+    .flex-center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-search {
+        width: 300px;
+        margin: auto;
+    }
+    .menu-items {
+        text-align: center;
+    }
 }
